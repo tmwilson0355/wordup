@@ -1,0 +1,70 @@
+@font-face {
+    font-family: creamy-sugary;
+    src: url(assets/fonts/Creamy\ Sugary.otf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(assets/fonts/Bebas-Regular.otf);
+}
+
+body {
+    background-image: url(assets/images/dti.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1, p {
+    font-family: creamy-sugary;
+    text-shadow: 1px 1px 3px pink;
+}
+
+button {
+    width: 60px;
+    height: 80px;
+    background-color: hotpink;
+    border: none;
+    /* border-radius: 50%; */
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    clip-path: path('M 30,15 C 30,-5 60, -5 60,15 C 60,35 40,60 30,80 C 20,60 0,35 0,15 C 0,-5 30, -5 30,15 Z'); 
+    /* clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 80%, 25% 100%, 0% 35%); */
+}
+
+button:hover {
+    background-color: pink;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+button span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+}
+
+#word {
+    font-size: 24px;
+    letter-spacing: 10px;
+}
